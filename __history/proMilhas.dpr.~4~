@@ -1,0 +1,18 @@
+program proMilhas;
+
+uses
+  Vcl.Forms,
+  tprincipal in 'view\tprincipal.pas' {FormPrincipal},
+  tmentrada in 'view\tmentrada.pas' {FormEntrada},
+  tcpessoas in 'view\tcpessoas.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.CreateForm(TFormEntrada, FormEntrada);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

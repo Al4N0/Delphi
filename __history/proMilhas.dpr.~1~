@@ -1,0 +1,14 @@
+program proMilhas;
+
+uses
+  Vcl.Forms,
+  tprincipal in 'view\tprincipal.pas' {FormPrincipal};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.Run;
+end.
