@@ -1,0 +1,75 @@
+unit vpn.view.principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TfrmPrincipal = class(TForm)
+    pnlMaster: TPanel;
+    pnlContainer: TPanel;
+    lbTitle: TLabel;
+    lbSubTitle: TLabel;
+    pnlVpn: TPanel;
+    edtVpn: TEdit;
+    pnlSalvar: TPanel;
+    shSalvar: TShape;
+    btnSalvar: TSpeedButton;
+    pnlFechar: TPanel;
+    shFechar: TShape;
+    btnFechar: TSpeedButton;
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnFecharClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  IniFiles;
+
+procedure TfrmPrincipal.btnFecharClick(Sender: TObject);
+var
+  Lines: TStringList;
+begin
+  Lines := TStringList.Create;
+  try
+    Lines.LoadFromFile('C:\dunamis\config.ini');
+    if Lines.Count >= 5 then
+      Lines[4] := 'IP='; // Limpa a linha 5 (índice 4)
+    Lines.SaveToFile('C:\dunamis\config.ini');
+  finally
+    Lines.Free;
+  end;
+  Close;
+end;
+
+procedure TfrmPrincipal.btnSalvarClick(Sender: TObject);
+var
+  Lines: TStringList;
+  IP: string;
+begin
+  IP := edtVpn.Text;
+  Lines := TStringList.Create;
+  try
+    Lines.LoadFromFile('C:\dunamis\config.ini');
+    if Lines.Count >= 5 then
+      Lines[4] := 'IP=' + IP; // Linha 5 (índice 4)
+    Lines.SaveToFile('C:\dunamis\config.ini');
+  finally
+    Lines.Free;
+  end;
+end;
+
+end.

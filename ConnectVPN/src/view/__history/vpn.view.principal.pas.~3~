@@ -1,0 +1,33 @@
+unit vpn.view.principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TfrmPrincipal = class(TForm)
+    pnlMaster: TPanel;
+    pnlContainer: TPanel;
+    lbTitle: TLabel;
+    lbSubTitle: TLabel;
+    pnlVpn: TPanel;
+    edtVpn: TEdit;
+    pnlSalvar: TPanel;
+    shSalvar: TShape;
+    btnSalvar: TSpeedButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+end.

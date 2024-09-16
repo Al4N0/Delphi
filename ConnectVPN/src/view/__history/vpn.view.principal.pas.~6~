@@ -1,0 +1,133 @@
+unit vpn.view.principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TfrmPrincipal = class(TForm)
+    pnlMaster: TPanel;
+    pnlContainer: TPanel;
+    lbTitle: TLabel;
+    lbSubTitle: TLabel;
+    pnlVpn: TPanel;
+    edtVpn: TEdit;
+    pnlSalvar: TPanel;
+    shSalvar: TShape;
+    btnSalvar: TSpeedButton;
+    pnlFechar: TPanel;
+    shFechar: TShape;
+    btnFechar: TSpeedButton;
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnFecharClick(Sender: TObject);
+    procedure edtVpnKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormShow(Sender: TObject);
+    procedure edtVpnKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  IniFiles;
+
+procedure TfrmPrincipal.btnFecharClick(Sender: TObject);
+var
+  Lines: TStringList;
+begin
+  Lines := TStringList.Create;
+  try
+    Lines.LoadFromFile('C:\dunamis\config.ini');
+    if Lines.Count >= 5 then
+      Lines[4] := 'banco=127.0.0.1'; // Limpa a linha 5 (índice 4)
+    if Lines.Count >= 5 then
+      Lines[7] := 'banco=127.0.0.1'; // Limpa a linha 8 (índice 7)
+    Lines.SaveToFile('C:\dunamis\config.ini');
+    begin
+  ShowMessage('Aplicação encerrada.');
+  Close; // Fecha o formulário
+end;
+  finally
+    Lines.Free;
+  end;
+  Close;
+end;
+
+procedure TfrmPrincipal.btnSalvarClick(Sender: TObject);
+var
+  Lines: TStringList;
+  IP: string;
+begin
+  IP := edtVpn.Text;
+  Lines := TStringList.Create;
+  try
+    Lines.LoadFromFile('C:\dunamis\config.ini');
+    if Lines.Count >= 5 then
+      Lines[4] := 'banco=' + IP; // Linha 5 (índice 4)
+    if Lines.Count >= 5 then
+      Lines[7] := 'banco=' + IP; // Linha 8 (índice 7)
+    Lines.SaveToFile('C:\dunamis\config.ini');
+    begin
+  // Ação de salvamento dos dados
+  ShowMessage('Dados salvos com sucesso!');
+end;
+  finally
+    Lines.Free;
+  end;
+end;
+
+procedure TfrmPrincipal.edtVpnKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if Key = VK_RETURN then  // Tecla Enter
+  begin
+    Key := 0; // Evita o beep
+    btnSalvar.Click; // Chama o evento de clique do botão Salvar
+  end
+  else if Key = VK_ESCAPE then  // Tecla ESC
+  begin
+    Key := 0; // Evita o beep
+    btnFechar.Click; // Chama o evento de clique do botão Fechar
+  end;
+end;
+
+
+procedure TfrmPrincipal.edtVpnKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+var
+  valorAtual: string;
+begin
+  valorAtual := Tedit(Sender).Text;
+
+  // Remover qualquer caractere que não seja número ou ponto
+  valorAtual := StringReplace(valorAtual, '.', '', [rfReplaceAll]);
+
+  // Adicionar a máscara do IP
+  if Length(valorAtual) > 2 then
+    Insert('.', valorAtual, 3);
+  if Length(valorAtual) > 4 then
+    Insert('.', valorAtual, 5);
+  if Length(valorAtual) > 6 then
+    Insert('.', valorAtual, 7);
+
+  TEdit(Sender).Text := valorAtual;
+  TEdit(Sender).SelStart := Length(valorAtual); // Colocar o cursor no fim do texto
+end;
+
+procedure TfrmPrincipal.FormShow(Sender: TObject);
+begin
+  edtVpn.SetFocus;
+end;
+
+
+end.
