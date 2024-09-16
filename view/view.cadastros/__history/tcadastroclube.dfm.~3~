@@ -1,0 +1,31 @@
+object FormCadastroClube: TFormCadastroClube
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Clubes'
+  ClientHeight = 593
+  ClientWidth = 1087
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 101
+  TextHeight = 13
+  object Lbprograma: TLabel
+    Left = 16
+    Top = 13
+    Width = 55
+    Height = 13
+    Caption = 'Programa *'
+  end
+  object CBprograma: TComboBox
+    Left = 16
+    Top = 32
+    Width = 194
+    Height = 21
+    TabOrder = 0
+  end
+end

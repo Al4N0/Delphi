@@ -55,6 +55,10 @@ object FormPrincipal: TFormPrincipal
       object Programa1: TMenuItem
         Caption = 'Programa'
       end
+      object Clubes1: TMenuItem
+        Caption = 'Clubes'
+        OnClick = Clubes1Click
+      end
       object Cartes1: TMenuItem
         Caption = 'Cart'#245'es'
       end
@@ -63,11 +67,11 @@ object FormPrincipal: TFormPrincipal
       end
     end
   end
-  object DbmilhasConnection: TFDConnection
+  object BancomilhasConnection: TFDConnection
     Params.Strings = (
-      'ConnectionDef=dbmilhas')
+      'ConnectionDef=bancomilhas')
     LoginPrompt = False
-    Left = 61
-    Top = 71
+    Left = 449
+    Top = 181
   end
 end

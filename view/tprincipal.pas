@@ -9,7 +9,7 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
   FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, Data.DB,
-  FireDAC.Comp.Client, tmentrada, tcpessoas;
+  FireDAC.Comp.Client, tmentrada, tcpessoas, tcclube;
 
 type
   TFormPrincipal = class(TForm)
@@ -28,9 +28,11 @@ type
     Programa1: TMenuItem;
     Cartes1: TMenuItem;
     ContaBancria1: TMenuItem;
-    DbmilhasConnection: TFDConnection;
+    Clubes1: TMenuItem;
+    BancomilhasConnection: TFDConnection;
     procedure Entrada1Click(Sender: TObject);
     procedure Pessoa1Click(Sender: TObject);
+    procedure Clubes1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,6 +45,16 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFormPrincipal.Clubes1Click(Sender: TObject);
+begin
+  FormClube := TFormClube.Create(nil);
+  try
+    FormClube.ShowModal;
+  finally
+    FormClube.Free;
+  end;
+end;
 
 procedure TFormPrincipal.Entrada1Click(Sender: TObject);
 

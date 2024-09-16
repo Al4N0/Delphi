@@ -1,0 +1,14 @@
+program SkyMilhas;
+
+uses
+  Vcl.Forms,
+  UFrmPrincipal in 'src\UFrmPrincipal.pas' {FrmPrincipal};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.Run;
+end.

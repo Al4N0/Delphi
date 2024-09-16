@@ -32,11 +32,10 @@ type
     Lbativo: TLabel;
     Btcancelar: TButton;
     Btsalvar: TButton;
-    Tbpessoas: TFDQuery;
     Mecpf: TMaskEdit;
+    Tbpessoa: TFDQuery;
     procedure BtcancelarClick(Sender: TObject);
     procedure BtsalvarClick(Sender: TObject);
-    procedure Edit1Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -61,31 +60,38 @@ end;
 
 procedure TFormCadastroPessoas.BtsalvarClick(Sender: TObject);
 var
-  Tbpessoas: TFDQuery;
+  Tbpessoa: TFDQuery;
 begin
   // Crie e configure o TFDQuery
-  Tbpessoas := TFDQuery.Create(Self);
+  Tbpessoa := TFDQuery.Create(Self);
   try
-    Tbpessoas.Connection := FormPrincipal.DbmilhasConnection;
+    Tbpessoa.Connection := FormPrincipal.BancomilhasConnection;
     // Use a conexão global
-    Tbpessoas.SQL.Text :=
-      'INSERT INTO pessoas (nome, cpf_cnpj, nascimento, email, tel, ativo) ' +
-      'VALUES (:nome, :cpf_cnpj, :nascimento, :email, :tel, :ativo)';
-    Tbpessoas.ParamByName('nome').AsString := Ednome.Text;
-    Tbpessoas.ParamByName('cpf_cnpj').AsString := Mecpf.Text;
-    Tbpessoas.ParamByName('nascimento').AsDate := Dtnascimento.Date;
-    Tbpessoas.ParamByName('email').AsString := Edemail.Text;
-    Tbpessoas.ParamByName('tel').AsString := Edcelular.Text;
-    Tbpessoas.ParamByName('ativo').AsBoolean := Tsativo.State = tssOn;
+    Tbpessoa.SQL.Text :=
+      'INSERT INTO pessoa (nome, cpf_cnpj, data_nascimento, email, telefone, obs, ativo) ' +
+      'VALUES (:nome, :cpf_cnpj, :data_nascimento, :email, :telefone, :obs, :ativo)';
+    Tbpessoa.ParamByName('nome').AsString := Ednome.Text;
+    Tbpessoa.ParamByName('cpf_cnpj').AsString := Mecpf.Text;
+    Tbpessoa.ParamByName('email').AsString := Edemail.Text;
+    Tbpessoa.ParamByName('telefone').AsString := Edcelular.Text;
+    Tbpessoa.ParamByName('data_nascimento').AsDate := Dtnascimento.Date;
+    Tbpessoa.ParamByName('obs').AsString := Edobs.Text;
+    Tbpessoa.ParamByName('ativo').AsBoolean := Tsativo.State = tssOn;
 
     // Execute a instrução SQL
-    Tbpessoas.ExecSQL;
+    Tbpessoa.ExecSQL;
 
     // Exibir uma mensagem de confirmação
     ShowMessage('Nome salvo com sucesso!');
   finally
-    Tbpessoas.Free;
+    Tbpessoa.Free;
   end;
+  Ednome.Clear;
+  Mecpf.Clear;
+  Dtnascimento.Date := Now;
+  Edemail.Clear;
+  Edobs.Clear;
+  Edcelular.Clear;
 end;
 
 end.

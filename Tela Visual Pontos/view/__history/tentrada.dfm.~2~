@@ -1,0 +1,59 @@
+object FormEntrada: TFormEntrada
+  Left = 0
+  Top = 0
+  Caption = 'Entrada de Pontos'
+  ClientHeight = 618
+  ClientWidth = 1189
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 101
+  TextHeight = 13
+  object DbmilhasConnection: TFDConnection
+    Params.Strings = (
+      'ConnectionDef=dbmilhas')
+    LoginPrompt = False
+    Left = 874
+    Top = 520
+  end
+  object CartaoTable: TFDQuery
+    Connection = DbmilhasConnection
+    SQL.Strings = (
+      'SELECT * FROM dbmilhas.cartao')
+    Left = 1119
+    Top = 516
+  end
+  object ClubeTable: TFDQuery
+    Connection = DbmilhasConnection
+    SQL.Strings = (
+      'SELECT * FROM dbmilhas.clube')
+    Left = 1052
+    Top = 518
+  end
+  object MovimentoTable: TFDQuery
+    Connection = DbmilhasConnection
+    SQL.Strings = (
+      'SELECT * FROM dbmilhas.movimento')
+    Left = 979
+    Top = 519
+  end
+  object PessoasTable: TFDQuery
+    Connection = DbmilhasConnection
+    SQL.Strings = (
+      'SELECT * FROM dbmilhas.pessoas')
+    Left = 690
+    Top = 517
+  end
+  object ProgramaTable: TFDQuery
+    Connection = DbmilhasConnection
+    SQL.Strings = (
+      'SELECT * FROM dbmilhas.programa')
+    Left = 755
+    Top = 516
+  end
+end

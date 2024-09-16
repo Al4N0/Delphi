@@ -3,7 +3,7 @@ object FormCadastroPessoas: TFormCadastroPessoas
   Top = 0
   Caption = 'Cadastro de Pessoas'
   ClientHeight = 546
-  ClientWidth = 1099
+  ClientWidth = 1138
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -163,11 +163,11 @@ object FormCadastroPessoas: TFormCadastroPessoas
     TabOrder = 10
     Text = '   .   .   -  '
   end
-  object Tbpessoas: TFDQuery
-    Connection = FormPrincipal.DbmilhasConnection
+  object Tbpessoa: TFDQuery
+    Connection = FormPrincipal.BancomilhasConnection
     SQL.Strings = (
-      'SELECT * FROM dbmilhas.pessoas')
-    Left = 975
-    Top = 386
+      'SELECT * FROM bancomilhas.pessoa')
+    Left = 820
+    Top = 454
   end
 end

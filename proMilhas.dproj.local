@@ -2,19 +2,25 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2024/08/28 12:57:01.000.781,=C:\Users\ALANO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/08/28 13:05:49.000.326,C:\Users\ALANO\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\ALANO\Documents\GitHub\Delphi\view\tprincipal.pas</Transaction>
-    <Transaction>2024/08/28 13:05:49.000.326,C:\Users\ALANO\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\ALANO\Documents\GitHub\Delphi\view\tprincipal.dfm</Transaction>
-    <Transaction>2024/08/28 13:06:05.000.205,C:\Users\ALANO\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\ALANO\Documents\GitHub\Delphi\proMilhas.dproj</Transaction>
+    <Transaction>2024/08/28 13:05:49.000.326,C:\Users\ALANO\Documents\GitHub\Delphi\view\tprincipal.dfm=C:\Users\ALANO\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/08/28 13:05:49.000.326,C:\Users\ALANO\Documents\GitHub\Delphi\view\tprincipal.pas=C:\Users\ALANO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/28 13:06:05.000.205,C:\Users\ALANO\Documents\GitHub\Delphi\proMilhas.dproj=C:\Users\ALANO\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2024/08/28 13:06:25.000.973,=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas</Transaction>
-    <Transaction>2024/08/28 13:07:07.000.375,C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.dfm=C:\Users\ALANO\Documents\GitHub\Delphi\view\tentrada.dfm</Transaction>
-    <Transaction>2024/08/28 13:07:07.000.375,C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas=C:\Users\ALANO\Documents\GitHub\Delphi\view\tentrada.pas</Transaction>
+    <Transaction>2024/08/28 13:07:07.000.375,C:\Users\ALANO\Documents\GitHub\Delphi\view\tentrada.pas=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/08/28 13:07:07.000.375,C:\Users\ALANO\Documents\GitHub\Delphi\view\tentrada.dfm=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.dfm</Transaction>
     <Transaction>2024/08/28 18:29:53.000.831,=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas</Transaction>
-    <Transaction>2024/08/28 18:30:23.000.390,C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.dfm=C:\Users\ALANO\Documents\GitHub\Delphi\view\tcpessoas.dfm</Transaction>
-    <Transaction>2024/08/28 18:30:23.000.390,C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas=C:\Users\ALANO\Documents\GitHub\Delphi\view\tcpessoas.pas</Transaction>
-    <Transaction>2024/08/28 18:30:35.000.552,C:\Users\ALANO\Documents\GitHub\Delphi\view\tentrada.pas=C:\Users\ALANO\Documents\GitHub\Delphi\view\tmentrada.pas</Transaction>
-    <Transaction>2024/08/28 18:30:35.000.552,C:\Users\ALANO\Documents\GitHub\Delphi\view\tentrada.dfm=C:\Users\ALANO\Documents\GitHub\Delphi\view\tmentrada.dfm</Transaction>
+    <Transaction>2024/08/28 18:30:23.000.390,C:\Users\ALANO\Documents\GitHub\Delphi\view\tcpessoas.pas=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/08/28 18:30:23.000.390,C:\Users\ALANO\Documents\GitHub\Delphi\view\tcpessoas.dfm=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/08/28 18:30:35.000.552,C:\Users\ALANO\Documents\GitHub\Delphi\view\tmentrada.dfm=C:\Users\ALANO\Documents\GitHub\Delphi\view\tentrada.dfm</Transaction>
+    <Transaction>2024/08/28 18:30:35.000.552,C:\Users\ALANO\Documents\GitHub\Delphi\view\tmentrada.pas=C:\Users\ALANO\Documents\GitHub\Delphi\view\tentrada.pas</Transaction>
     <Transaction>2024/08/28 18:51:23.000.843,=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas</Transaction>
-    <Transaction>2024/08/28 18:52:00.000.215,C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas=C:\Users\ALANO\Documents\GitHub\Delphi\view\view.cadastros\tcadastropessoas.pas</Transaction>
-    <Transaction>2024/08/28 18:52:00.000.215,C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.dfm=C:\Users\ALANO\Documents\GitHub\Delphi\view\view.cadastros\tcadastropessoas.dfm</Transaction>
+    <Transaction>2024/08/28 18:52:00.000.215,C:\Users\ALANO\Documents\GitHub\Delphi\view\view.cadastros\tcadastropessoas.pas=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/08/28 18:52:00.000.215,C:\Users\ALANO\Documents\GitHub\Delphi\view\view.cadastros\tcadastropessoas.dfm=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/09/03 12:14:16.323,=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/09/03 12:14:24.475,C:\Users\ALANO\Documents\GitHub\Delphi\view\tcclube.dfm=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/09/03 12:14:24.475,C:\Users\ALANO\Documents\GitHub\Delphi\view\tcclube.pas=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/09/03 12:20:49.674,=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/09/03 12:22:45.040,C:\Users\ALANO\Documents\GitHub\Delphi\view\view.cadastros\tcadastroclube.dfm=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/09/03 12:22:45.040,C:\Users\ALANO\Documents\GitHub\Delphi\view\view.cadastros\tcadastroclube.pas=C:\Users\ALANO\Documents\GitHub\Delphi\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

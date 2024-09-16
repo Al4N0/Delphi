@@ -1,0 +1,16 @@
+program SkyMilhas;
+
+uses
+  Vcl.Forms,
+  UFrmPrincipal in 'src\UFrmPrincipal.pas' {FrmPrincipal},
+  UFrmCadastroPessoa in 'src\forms\UFrmCadastroPessoa.pas' {FrmCadastroPessoa};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFrmCadastroPessoa, FrmCadastroPessoa);
+  Application.Run;
+end.

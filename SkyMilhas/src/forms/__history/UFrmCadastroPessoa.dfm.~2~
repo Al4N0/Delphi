@@ -1,0 +1,58 @@
+object FrmCadastroPessoa: TFrmCadastroPessoa
+  Left = 0
+  Top = 0
+  Caption = 'Cadastrar Pessoa'
+  ClientHeight = 779
+  ClientWidth = 1103
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 101
+  TextHeight = 13
+  object Lbprincipal: TLabel
+    Left = 0
+    Top = 0
+    Width = 1103
+    Height = 34
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Cadastrar Pessoa'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -28
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ExplicitWidth = 243
+  end
+  object Lbnome: TLabel
+    Left = 24
+    Top = 61
+    Width = 57
+    Height = 21
+    Caption = 'Nome *'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Ednome: TEdit
+    Left = 24
+    Top = 88
+    Width = 385
+    Height = 29
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+end
